@@ -6,7 +6,7 @@ const Create = () => {
     const [task, setTask] = useState('');
 
     const createTask = () => {
-        axios.post('http://localhost:5000/add', { task: task.trim() })
+        axios.post(`${process.env.REACT_APP_API_URL}/add`, { task: task.trim() })
             .then(result => {
                 console.log(result.data);
                 window.location.reload();
