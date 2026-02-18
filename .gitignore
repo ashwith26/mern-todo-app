@@ -1,7 +1,7 @@
-TODO/todo_backend/.env
-TODO/todo_backend/node_modules/
+todo_backend/.env
+todo_backend/node_modules/
 
 
-TODO/todo_frontend/.env
-TODO/todo_frontend/node_modules/
-TODO/todo_frontend/build/
+todo_frontend/.env
+todo_frontend/node_modules/
+todo_frontend/build/
