@@ -4,7 +4,7 @@ services:
   
   backend: 
     #    build: ./todo_backend
-    image: ashwithm01/todo-backend:v1 
+    image: 119972959035.dkr.ecr.us-east-1.amazonaws.com/todo-backend:1.0 
     container_name: todo-backend
     env_file:
       - ./todo_backend/.env
@@ -16,7 +16,7 @@ services:
     #      context: ./todo_frontend
     #      args: 
     #        REACT_APP_API_URL: /api/
-    image: ashwithm01/todo-frontend:v1  
+    image: 119972959035.dkr.ecr.us-east-1.amazonaws.com/todo-frontend:1.0  
     container_name: todo-frontend
     ports: 
       - "80:80"
