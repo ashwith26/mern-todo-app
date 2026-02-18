@@ -20,7 +20,7 @@ git clone https://github.com/AtharvaKulkarniIT/mern-todo-app.git
 ### 2. Install dependencies
 
 ```bash
-cd mern-todo-app/TODO
+cd mern-todo-app/
 
 # Split the terminal :
 
