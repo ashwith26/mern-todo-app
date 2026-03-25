@@ -3,18 +3,12 @@ kind: Ingress
 metadata:
   name: todo-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2  
-spec: 
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
   rules:
     - http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend: 
-              service: 
-                name: frontend-service
-                port: 
-                  number: 80
+          # ✅ API first — before / catches everything
           - path: /api(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
@@ -22,3 +16,12 @@ spec:
                 name: backend-service
                 port:
                   number: 5000
+
+          # ✅ Frontend with capture groups so rewrite preserves full path
+          - path: /()(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: frontend-service
+                port:
+                  number: 80
